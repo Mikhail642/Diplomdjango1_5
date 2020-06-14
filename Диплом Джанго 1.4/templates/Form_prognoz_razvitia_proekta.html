@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Форма для добавление прогноза развития проекта на следующий год</title>
+<style>
+body {
+  margin: 0;
+  height: 100px;
+background:LightBlue;
+}
+
+
+.id {
+  width: 250px;
+margin-left: 150px;
+}
+
+.zadacha_prognoza {
+  width: 250px;
+margin-left: 90px;
+}
+
+.name_product{
+  width: 300px;
+
+}
+.kratoe_opisanie{
+    width:250px;
+    margin-left: 70px;
+}
+.sroki_realizachii_s{
+    width: 250px;
+    margin-left: 185px;
+}
+
+.sroki_realizachii_po{
+      width: 250px;
+      margin-left: 30px;
+}
+
+
+
+input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.registerbtn {
+  background-color: #4CAF50;
+  color: black;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+  font-size: 20px;
+  font-family: 'Times new Roman'
+}
+
+.container {
+  padding: 16px;
+  font-size: 25px;
+  font-family: 'Times New Roman';
+}
+
+.title{
+    font-size: 28px;
+}
+
+.name_product{width:130px}
+    </style>
+</head>
+<body>
+<form action="/form_zaivki_url/" method="post">
+  <div class="container">
+      <a href="{% url 'Project_new' %}" class="top-menu"><span class=""></span></a>
+
+    <h1 class="title">Форма для добавления прогноза развития проекта на следующий год</h1>
+
+
+    <label for="id_project"><b>Id проекта</b></label>
+    <input type="text"  class="id"name="id_project" required>
+<br>
+    <label for="zadacha_prognoza"><b>Задача прогноза</b></label>
+    <input type="text"  class="zadacha_prognoza" name="zadacha_prognoza" required>
+<br>
+    <label  for="name_product"><b>Наименование продукта</b></label>
+    <input type="text"  class="name_product"name="name_product" required>
+<br>
+    <label for="kratkoe_opisanie"><b>Краткое описание</b></label>
+    <input type="text" class="kratoe_opisanie" name="kratkoe_opisanie" required>
+<br>
+    <label for="sroki_realizachii_s"><b>Сроки c</b></label>
+    <input type="date"  class="sroki_realizachii_s" name="sroki_realizachii_s" required>
+      <br>
+    <label for="sroki_realizachii_po" ><b>Сроки реализации по</b></label>
+    <input type="date" class="sroki_realizachii_po" name="sroki_realizachii_po" required>
+
+<br>
+ <br>
+
+    <button type="submit" class="registerbtn">Добавить данные</button>
+  </div>
+</form>
+
+</body>
+</html>
+

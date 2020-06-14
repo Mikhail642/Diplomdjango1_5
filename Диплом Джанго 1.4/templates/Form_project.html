@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма для добавления проекта</title>
+      <style>
+
+
+
+body {
+  margin: 0;
+  height: 100px;
+background:LightBlue;
+}
+
+
+
+.registerbtn {
+  background-color: #4CAF50;
+  color: black;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+  font-size: 20px;
+  font-family: 'Times new Roman'
+}
+
+.container {
+  padding: 16px;
+  font-size: 25px;
+  font-family: 'Times New Roman';
+}
+
+.title{
+    font-size: 28px;
+}
+
+
+.name_project{
+  width: 270px;
+  margin-left: 50px;
+}
+
+  .data_realizachii_s{
+  width: 278px;
+  margin-left: 100px;
+}
+ .data_realizachii_po{
+  width: 270px;
+margin-left: 90px;
+ }
+ .selka_na_saite{
+  width: 270px;
+  margin-left: 120px;
+}
+.rukovoditel_organization{
+   width: 270px;
+}
+
+.nauche_rukovoditel{
+   width: 270px;
+   margin-left: 40px;
+}
+
+.predloshenie_po_ispolzovanie{
+   width: 190px;
+   margin-left: 20px;
+}
+
+.name_organization{
+    width: 260px;
+}
+
+.avtor{
+    width: 270px;
+   margin-left: 240px;
+}
+
+
+    </style>
+</head>
+<body>
+<form action="/form_zaivki_url/" method="post">
+  <div class="container">
+      <a href="{% url 'Project_new' %}" class="top-menu"><span class=""></span></a>
+
+    <h1 class="title">Форма для добавления проекта</h1>
+
+    <label for="name_project"><b>Наименование проекта</b></label>
+    <input type="text" class="name_project" name="name_project" required>
+<br>
+    <label for="data_realizachii_s"><b>Дата реализации с</b></label>
+    <input type="date"  class="data_realizachii_s" name="data_realizachii_s" required>
+<br>
+    <label for="data_realizachii_po"><b>Дата реализации по</b></label>
+    <input type="date" class="data_realizachii_po" name="data_realizachii_po" required>
+<br>
+    <label for="data_realizachii_po"><b>Ссылка на сайте</b></label>
+    <input type="text" class="selka_na_saite" name="selka_na_saite" required>
+<br>
+
+    <label for=" rukovoditel_organization"><b>Руководитель организации</b></label>
+    <input type="text"  class="rukovoditel_organization" name="rukovoditel_organization" required>
+<br>
+ <label for="nauche_rukovoditel"><b>Научный руководитель</b></label>
+    <input type="text" class="nauche_rukovoditel" name="nauche_rukovoditel" required>
+
+<br>
+ <label for="predloshenie_po_ispolzovanie"><b>Предложение по использованию</b></label>
+    <input type="text" class="predloshenie_po_ispolzovanie" name="predloshenie_po_ispolzovanie" required>
+<br>
+ <label for="name_organization"><b>Наименование организации</b></label>
+    <input type="text" class="name_organization" name="name_organization" required>
+<br>
+ <label for="avtor"><b>Автор</b></label>
+    <input type="text"  class="avtor" name="avtor" required>
+   <br>
+      <br>
+    <button type="submit" class="registerbtn">Добавить данные</button>
+  </div>
+</form>
+
+</body>
+</html>

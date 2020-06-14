@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Форма для добавление плана реализации</title>
+<style>
+body {
+  margin: 0;
+  height: 100px;
+background:LightBlue;
+}
+
+
+.registerbtn {
+  background-color: #4CAF50;
+  color: black;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+  font-size: 20px;
+  font-family: 'Times new Roman'
+}
+
+.container {
+  padding: 16px;
+  font-size: 25px;
+  font-family: 'Times New Roman';
+}
+
+.title{
+    font-size: 28px;
+}
+
+.project{
+    margin-left: 120px;
+    width: 170px;
+}
+.zadacha{
+    margin-left: 125px;
+    width:170px;
+}
+
+.sroki_s{
+   margin-left: 115px;
+   width: 170px;
+}
+
+ .sroki_po{
+   margin-left: 100px;
+   width: 170px;
+}
+</style>
+</head>
+<body>
+<form action="/form_zaivki_url/" method="post">
+  <div class="container">
+
+    <h1 class="title">Форма для добавления плана реализации</h1>
+
+    <label for="zadacha"><b>Задача</b></label>
+    <input   type="text" class="zadacha" size="30"  name="zadacha" required>
+<br>
+    <label for="project"><b>Проект</b></label>
+    <input type="text"  class="project" name="name_project" required>
+<br>
+    <label for="kratoe_naimenovanie" class="kratoe_naimenovanie"><b>Краткое описание</b></label>
+    <input type="text"  name="kratkoe_naimenovamie" required>
+<br>
+    <label for="sroki_s"><b>Сроки с</b></label>
+    <input type="date"  class="sroki_s" name="sroki_s" required>
+
+<br>
+    <label for="sroki_po"><b>Сроки по</b></label>
+    <input type="date"  class="sroki_po" name="sroki_po" required>
+
+<br>
+<br>
+    <button type="submit" class="registerbtn">Добавить данные</button>
+  </div>
+</form>
+
+</body>
+</html>
+

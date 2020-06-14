@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Форма для добавления функциив проекте</title>
+<style>
+body {
+  margin: 0;
+  height: 100px;
+background:LightBlue;
+}
+
+
+
+.registerbtn {
+  background-color: #4CAF50;
+  color: black;
+  padding: 16px 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  opacity: 0.9;
+  font-size: 20px;
+    margin-top: 40px;
+  font-family: 'Times new Roman'
+}
+
+.container {
+  padding: 16px;
+  font-size: 25px;
+  font-family: 'Times New Roman';
+}
+
+.title{
+    font-size: 28px;
+}
+
+
+.partner{
+    font-size: 20px;
+    width: 170px;
+    margin-left: 20px;
+    font-family: 'Times New Roman'
+}
+
+.project{
+    font-size: 20px;
+    width: 170px;
+    margin-left: 30px;
+    margin-top:20px;
+    font-family: 'Times New Roman'
+
+}
+
+
+   .function{
+    font-size: 20px;
+    width: 170px;
+    margin-left: 10px;
+    margin-top:20px;
+    font-family: 'Times New Roman'
+}
+
+
+ </style>
+</head>
+<body>
+
+<form action="/form_zaivki_url/" method="post">
+  <div class="container">
+      <a href="{% url 'Project_new' %}" class="top-menu"><span class=""></span></a>
+
+    <h1 class="title">Форма для добавления организаций партнеров в проекте</h1>
+
+    <label for="partners"><b>Партнер</b></label>
+    <input type="text"   class="partner" name="name_project" required>
+
+<br>
+    <label for="project"><b>Проект</b></label>
+    <input type="text"   class="project" name="name_project" required>
+<br>
+    <label for="function"><b>Функция</b></label>
+    <input type="text" class="function" name="name_project" required>
+<br>
+
+    <button type="submit" class="registerbtn">Добавить данные</button>
+  </div>
+</form>
+
+</body>
+</html>
+

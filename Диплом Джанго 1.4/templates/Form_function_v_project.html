@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма для добавления функции в проекте</title>
+    <style>
+
+
+
+body {
+  margin: 0;
+  height: 100px;
+background:LightBlue;
+}
+
+
+.registerbtn {
+  background-color: #4CAF50;
+  color: black;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+  font-size: 20px;
+  font-family: 'Times new Roman'
+}
+
+.container {
+  padding: 16px;
+  font-size: 25px;
+  font-family: 'Times New Roman';
+}
+
+.title{
+    font-size: 28px;
+}
+
+
+.container {
+  padding: 16px;
+  font-size: 25px;
+  font-family: 'Times New Roman';
+}
+
+.name_function{
+    width:200px;
+}
+.id_function{
+    margin-left: 80px;
+    width:200px;
+}
+
+
+    </style>
+</head>
+<body>
+<form action="/form_zaivki_url/" method="post">
+  <div class="container">
+      <a href="{% url 'Project_new' %}" class="top-menu"><span class=""></span></a>
+
+    <h1 class="title">Форма для добавления функции в проекте</h1>
+
+
+    <label for="name_function"><b>Название функции</b></label>
+    <input type="text"  class="name_function" name="name_function" required>
+
+<br>
+    <label for="id_function" ><b>Id функции</b></label>
+    <input type="text" class="id_function" name="name_project" required>
+
+<br>
+<br>
+    <button type="submit" class="registerbtn">Добавить данные</button>
+  </div>
+</form>
+
+</body>
+</html>

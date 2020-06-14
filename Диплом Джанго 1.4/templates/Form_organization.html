@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Форма для добавления организации</title>
+<style>
+body {
+  margin: 0;
+  height: 100px;
+background:LightBlue;
+}
+
+
+.name_organization{
+  width: 200px;
+}
+
+
+.registerbtn {
+  background-color: #4CAF50;
+  color: black;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+  font-size: 20px;
+  font-family: 'Times new Roman'
+}
+
+.container {
+  padding: 16px;
+  font-size: 25px;
+  font-family: 'Times New Roman';
+}
+
+.title{
+    font-size: 28px;
+}
+
+    </style>
+</head>
+<body>
+<form action="/form_zaivki_url/" method="post">
+  <div class="container">
+      <a href="{% url 'Project_new' %}" class="top-menu"><span class=""></span></a>
+
+    <h1 class="title">Форма для добавления Организации</h1>
+
+    <label for="name_organization"><b>Наименование организации</b></label>
+    <input type="text" class="name_organization" name="name_organization" required>
+<br>
+
+    <button type="submit" class="registerbtn">Добавить данные</button>
+  </div>
+</form>
+
+</body>
+</html>
