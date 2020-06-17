@@ -1,0 +1,108 @@
+
+<!-- templates/home.html -->
+{% load static %}
+<html>
+<head>
+ <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+     * { box-sizing: border-box; }
+body {
+  margin: 0;
+  height: 100px;
+background:#B0E0E6;
+}
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  transition: .4s ease-in-out;
+}
+.topmenu {
+  backface-visibility: hidden;
+background:#B0E0E6	;
+text-color:black;
+font-size: 14pt;
+font-family: 'Times New Roman';
+}
+
+.topmenu > li > a {
+  font-family: 'Exo 2', sans-serif;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 30px;
+  font-weight: bold;
+  color:SeaGreen;
+  text-transform: uppercase;
+}
+
+.topmenu li a:hover { color: black; }
+
+.topmenu > li:hover .submenu{
+  visibility: visible;
+  opacity: 1;
+  transform: perspective(600px) rotateX(0deg);
+}
+.submenu li a {
+  color: Gold;
+  font-size: 13px;
+  line-height: 36px;
+  padding: 0 25px;
+  font-family: 'Times new Roman', serif;
+}
+
+ .fig {
+    text-align: right;
+   margin-top: 2%;}
+
+
+.text-center{
+color: blue;
+}
+
+.Administrirovanie{
+ background: white;
+    color: orange;
+    font-size: 9pt;
+}
+
+.logo{
+ align:right;
+}
+    </style>
+
+</head>
+<body bgcolor="DarkSalmon">
+  <p class="logo"><img src="C:\Users\Dexp\Desktop\0706\organizaion_logo.png" width="350" height="200"  alt=""></p>
+<h1 class="text-center">"Электронный банк цифровых образовательных ресурсов"</h1>
+
+ <table class="table">
+  <ul class="topmenu">
+    <li><a href="http://127.0.0.1:8000/admin/is_electronne_bank/organization/">Организация</a></li>
+    <li><a href="http://127.0.0.1:8000/admin/is_electronne_bank/partner/">Организация партнер</a></li>
+    <li><a href="http://127.0.0.1:8000/admin/is_electronne_bank/perspektiveispolzovaniarezultatovproektavmassovoipraktike/">Перспективы использования в массовой практике</a></li>
+    <li><a href="http://127.0.0.1:8000/admin/is_electronne_bank/planrealizachiivproekte/">План реализации в проекте</a></li>
+    <li><a href="http://127.0.0.1:8000/admin/is_electronne_bank/prognozrazvitiaproekta/">Прогноз развития проекта</a></li>
+    <li><a href="http://127.0.0.1:8000/admin/is_electronne_bank/project/">Проекты</a></li>
+    <li><a href="http://127.0.0.1:8000/admin/is_electronne_bank/function/">Функции</a></li>
+    <li><a href="http://127.0.0.1:8000/admin/is_electronne_bank/functionvproject/">Функции в проекте</a></li>
+
+  </ul>
+</nav>
+</table>
+
+<div>
+
+    <button class="Administrirovanie"><a href="http://127.0.0.1:8000/admin/"> Администрирование</a> </button>
+</div>
+
+
+</body>
+</html>
