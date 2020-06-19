@@ -1,0 +1,22 @@
+{% extends 'base_function_v_project.html' %}
+
+{% block content %}
+    <div class="FunctionVProject">
+        {% if FunctionVProject.name_function %}
+            <div class="name_function">
+                {{ FunctionVProject.name_function }}
+            </div>
+        {% endif %}
+          {% if FunctionVProject.id_function %}
+            <div class="id_function">
+                {{ FunctionVProject.id_function }}
+            </div>
+        {% endif %}
+
+{% if user.is_authenticated %}
+     <a class="btn btn-default" href="{% url 'function_edit'  %}"><span class="glyphicon glyphicon-pencil"></span></a>
+{% endif %}
+        <h1>{{ FunctionVProject.id_function }}</h1>
+    </div>
+{% endblock %}
+

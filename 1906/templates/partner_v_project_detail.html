@@ -1,0 +1,29 @@
+{% extends 'base_partner_v_project.html' %}
+
+{% block content %}
+    <div class="PartnerVProject">
+        {% if PartnerVProject.parters %}
+            <div class="parters">
+                {{ PartnerVProject.parters }}
+            </div>
+        {% endif %}
+        {% if PartnerVProject.project %}
+            <div class="project">
+                {{ PartnerVProject.project  }}
+            </div>
+        {% endif %}
+
+        {% if PartnerVProject.function  %}
+            <div class="function">
+                {{ PartnerVProject.function }}
+            </div>
+        {% endif %}
+
+{% if user.is_authenticated %}
+     <a class="btn btn-default" href="{% url 'partner_v_project_edit' %}"><span class="glyphicon glyphicon-pencil"></span></a>
+{% endif %}
+        <h1>{{ PartnerVProject.parters}}</h1>
+    </div>
+{% endblock %}
+
+

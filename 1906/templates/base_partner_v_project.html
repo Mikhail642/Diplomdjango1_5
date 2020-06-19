@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+    <head>
+        <title>"Электронный банк цифровых образовательных ресурсов"</title>
+<style>
+body {
+  margin: 0;
+  height: 100px;
+background:#B0E0E6;
+}
+
+</style>
+    </head>
+    <body>
+        <div class="page-header">
+{% if user.is_authenticated %}
+    <a href="{% url 'partner_v_project_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endif %}
+            <h1><a href="/">"Электронный банк цифровых образовательных ресурсов"</a></h1>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
