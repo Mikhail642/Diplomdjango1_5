@@ -1,0 +1,17 @@
+{% extends 'base_perspektive.html' %}
+
+{% block content %}
+    <div class="Perspektive">
+        {% if PerspektiveIspolzovaniaRezultatovProektaVmassovoiPraktike.function_v_projet %}
+            <div class="perspektive_ispolzovania_produkta_innovation_deitelnosti">
+                {{ PerspektiveIspolzovaniaRezultatovProektaVmassovoiPraktike.perspektive_ispolzovania_produkta_innovation_deitelnosti }}
+            </div>
+        {% endif %}
+
+{% if user.is_authenticated %}
+     <a class="btn btn-default" href="{% url 'function_edit'  %}"><span class="glyphicon glyphicon-pencil"></span></a>
+{% endif %}
+        <h1>{{ PerspektiveIspolzovaniaRezultatovProektaVmassovoiPraktike.function_v_projet }}</h1>
+    </div>
+{% endblock %}
+

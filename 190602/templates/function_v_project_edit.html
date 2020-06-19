@@ -1,0 +1,11 @@
+{% extends 'base_function_v_project.html' %}
+
+{% block content %}
+    <h1>Форма для добавление Функции в проекте</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Добавить</button>
+    </form>
+{% endblock %}
+
+
