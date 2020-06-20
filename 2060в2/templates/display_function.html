@@ -1,0 +1,45 @@
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+          h1 {
+            font-size: 30px;
+            font-family: "Times New Roman";
+            color: OrangeRed;
+            margin-left: 20px;
+        }
+          h2{
+            margin-left: 20px;
+            margin-top: 40px;
+
+        }
+
+
+ body {
+background:#B0E0E6;
+     font-family: "Times New Roman";
+}
+    </style>
+
+</head>
+<body bgcolor="PowderBlue">
+ <h2><a href="http://127.0.0.1:8000/">"Электронный банк цифровых образовательных ресурсов"</a></h2>
+<h1>Функции</h1>
+
+<table class="table">
+    <tr>
+
+        <th class="function_v_projet" style="background-color:orange">Название функции</th>
+    </tr>
+    {% for function_v_project in Function %}
+    <tr>
+        <td> {{ function_v_project.Function }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>

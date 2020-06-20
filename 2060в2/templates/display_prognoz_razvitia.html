@@ -1,0 +1,77 @@
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+ body {
+background:#B0E0E6;
+     font-family: "Times New Roman";
+}
+
+
+        . project{
+            width: 50px;
+        }
+
+
+        h1 {
+            font-size: 25px;
+            font-family: "Times New Roman";
+            color: OrangeRed;
+            margin-left: 30px;
+        }
+
+
+        h2{
+            margin-left: 30px;
+            margin-top: 40px;
+            font-family: "Times New Roman";
+        }
+
+
+        p1 {
+            margin-left: 10px;
+            font-size: 40px;
+            margin-top: 60px;
+        }
+
+
+        p2 {
+            margin-left: 00px;
+            font-size: 40px;
+            margin-top: 60px;
+        }
+
+    </style>
+
+</head>
+<body bgcolor="PowderBlue">
+ <h2><a href="http://127.0.0.1:8000/">"Электронный банк цифровых образовательных ресурсов"</a></h2>
+<h1>Прогнозы развития проектов</h1>
+
+
+
+
+<table class="table">
+    <tr>
+        <th class="zadacha_prognoza" style="background-color:orange"> Задача прогноза</th>
+        <th class="name_product" style="background-color:DodgerBlue"> Название продукта</th>
+        <th class="kratkoe_opisanie" style="background-color:Tomato"> Краткое описание</th>
+        <th class="sroki_realizachii_s" style="background-color:orange"> Сроки реализации с</th>
+        <th class="sroki_realizachii_po" style="background-color:DodgerBlue"> Сроки реализации по</th>
+    </tr>
+    {% for zadacha_prognoza in PrognozRazvitiaProekta %}
+    <tr>
+        <td> {{ zadacha_prognoza.PrognozRazvitiaProekta }}</td>
+        <td> {{ name_product.PrognozRazvitiaProekta }}</td>
+        <td> {{ kratkoe_opisanie.PrognozRazvitiaProekta }}</td>
+        <td> {{ sroki_realizachii_s.PrognozRazvitiaProekta }}</td>
+        <td> {{ sroki_realizachii_po.PrognozRazvitiaProekta }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="Project">
+        {% if project.name_project %}
+            <div class="name_project">
+                {{ project.project_name }}
+            </div>
+        {% endif %}
+        {% if project.data_realizachii_s %}
+            <div class="data_realizachii_s">
+                {{ project.data_realizachii_s  }}
+            </div>
+        {% endif %}
+
+        {% if project.data_realizachii_po  %}
+            <div class="data_realizachii_po">
+                {{ project.data_realizachii_po }}
+            </div>
+        {% endif %}
+
+
+        {% if project.selka_na_saite  %}
+            <div class="selka_na_saite">
+                {{ project.selka_na_saite }}
+            </div>
+        {% endif %}
+
+         {% if project.product_innovation_deatelnosti  %}
+            <div class="product_innovation_deatelnosti">
+                {{ project.product_innovation_deatelnosti }}
+            </div>
+        {% endif %}
+
+       {% if project.rukovodite_organization  %}
+            <div class="rukovodite_organization">
+                {{ project.rukovodite_organization }}
+            </div>
+        {% endif %}
+
+        {% if project.nauche_rukovoditel  %}
+            <div class="nauche_rukovoditel">
+                {{ project.nauche_rukovoditel }}
+            </div>
+        {% endif %}
+
+         {% if project.predloshenie_po_ispolzovanie  %}
+            <div class="predloshenie_po_ispolzovanie">
+                {{ project.predloshenie_po_ispolzovanie }}
+            </div>
+        {% endif %}
+
+         {% if project.name_organization  %}
+            <div class="name_organization">
+                {{ project.name_organization }}
+            </div>
+        {% endif %}
+
+        {% if project.avtor  %}
+            <div class="avtor">
+                {{ project.avtor }}
+            </div>
+        {% endif %}
+
+
+{% if user.is_authenticated %}
+     <a class="btn btn-default" href="{% url 'project_edit' pk=project.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+{% endif %}
+        <h1>{{ project.project_name }}</h1>
+    </div>
+{% endblock %}
+
+
