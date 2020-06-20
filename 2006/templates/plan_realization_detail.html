@@ -1,0 +1,42 @@
+{% extends 'base_plan_realization_v_project.html' %}
+
+{% block content %}
+    <div class="PlanRealizationVProject">
+        {% if PlanRealizationVProject.zadacha %}
+            <div class="zadacha">
+                {{ PlanRealizationVProject.zadacha }}
+            </div>
+        {% endif %}
+        {% if PlanRealizationVProject.project %}
+            <div class="project">
+                {{ PlanRealizationVProject.project  }}
+            </div>
+        {% endif %}
+
+        {% if PlanRealizationVProject.kratoe_naimenovanie %}
+            <div class="kratoe_naimenovanie">
+                {{ PlanRealizationVProject.kratoe_naimenovanie }}
+            </div>
+        {% endif %}
+
+
+        {% if PlanRealizationVProject.sroki_s %}
+            <div class="sroki_s">
+                {{ PlanRealizationVProject.sroki_s }}
+            </div>
+        {% endif %}
+
+        {% if PlanRealizationVProject.sroki_po %}
+            <div class="sroki_po">
+                {{ PlanRealizationVProject.sroki_po }}
+            </div>
+        {% endif %}
+
+{% if user.is_authenticated %}
+     <a class="btn btn-default" href="{% url 'project_edit' pk=project.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+{% endif %}
+        <h1>{{ PlanRealizationVProject.zadacha  }}</h1>
+    </div>
+{% endblock %}
+
+

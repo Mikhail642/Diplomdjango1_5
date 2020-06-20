@@ -1,0 +1,190 @@
+
+
+
+
+<!-- templates/home.html -->
+{% load static %}
+<html>
+<head>
+ <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+     * { box-sizing: border-box; }
+body {
+  margin: 0;
+  height: 100px;
+background:#B0E0E6;
+}
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  transition: .4s ease-in-out;
+}
+.topmenu {
+  backface-visibility: hidden;
+background:#B0E0E6	;
+text-color:black;
+font-size: 14pt;
+font-family: 'Times New Roman';
+}
+
+.topmenu > li > a {
+  font-family: 'Exo 2', sans-serif;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 30px;
+  font-weight: bold;
+  color:white;
+  text-transform: uppercase;
+}
+
+.topmenu li a:hover { color: black; }
+
+.topmenu > li:hover .submenu{
+  visibility: visible;
+  opacity: 1;
+  transform: perspective(600px) rotateX(0deg);
+}
+.submenu li a {
+  color: Gold;
+  font-size: 13px;
+  line-height: 36px;
+  padding: 0 25px;
+  font-family: 'Times new Roman', serif;
+}
+
+ .fig {
+    text-align: right;
+   margin-top: 2%;}
+
+
+.text-center{
+color: blue;
+}
+
+.Administrirovanie{
+ background: white;
+    color: orange;
+    font-size: 9pt;
+}
+
+.logo{
+ align:right;
+}
+body {
+    /* Убираю отступы. */
+    margin:0px;
+    /* Убираю еще отступы. */
+    padding:0px;
+    /* Задаю шрифт. */
+    font: 14px 'Verdana';
+}
+ul {
+    /* Убираю маркеры у списка*/
+    list-style: none;
+    /* Делаю элементы блочными. */
+    display: block;
+    /* Убираю отступы. */
+    margin:0px;
+    /* Убираю еще отступы! */
+    padding:0px;
+}
+ul:after {
+    /* Делаю элементы блочными. */
+    display: block;
+    /* Убираю выравнивание. */
+    float: none;
+    content: ' ';
+    clear: both;
+}
+ul.mmenuu > li {
+    /* Задаю выравнивание и позиционирование. */
+    float: left;
+    /* Считаем координаты относительно исходного места*/
+    position: relative;
+}
+ul.mmenuu > li > a {
+    /* Делаю элементы блочными: */
+    display: block;
+    /* Задаю белый цвет. */
+    color: #fff;
+    /* Задаю отступ 10px. */
+    padding: 10px;
+    /* Убираю форматирование*/
+    text-decoration: none;
+    /* Задаю цвет. */
+    background-color: #da570f;
+}
+ul.mmenuu > li > a:hover {
+    /* Задаю цвет при наведении. */
+    background-color: #eb9316;
+}
+ul.ssubmenuu {
+    position: absolute;
+    width: 240px;
+    top: 37px;
+    left:0px;
+    /* Делаю субменю скрытыми. */
+    display: none;
+    /* Цвет — белый. */
+    background-color: white;
+}
+ul.ssubmenuu > li {
+    /* Блочное расположение элементов*/
+    display: block;
+}
+ul.ssubmenuu > li > a {
+    /* Делаю элементы блочными. */
+    display: block;
+    /* Убираю форматирование*/
+    text-decoration: none;
+    /* Задаю отступ. */
+    padding: 10px;
+    /* Задаю цвет. */
+    color: #ffffff;
+    /* Еще цвет. */
+    background-color: #da570f;
+}
+ul.ssubmenuu > li > a:hover {
+    /* Цвет бэкграунда при наведении. */
+    background-color: #eb9316;
+    /* Задаю подчеркивание*/
+    text-decoration: underline;
+}
+ul.mmenuu > li:hover > ul.ssubmenuu {
+    /* Делаю элементы блочными. */
+    display: block;
+}
+    </style>
+
+</head>
+<body bgcolor="DarkSalmon">
+<h1 class="text-center">"Электронный банк цифровых образовательных ресурсов"</h1>
+
+<ul class="mmenuu">
+    <li><a href=#>Добавление данных РИП</a>
+        <ul class="ssubmenuu">
+    <li><a href="http://127.0.0.1:8000/organization/new/">Организация</a></li>
+    <li><a href="http://127.0.0.1:8000/partner/new/">Организация партнер</a></li>
+    <li><a href="http://127.0.0.1:8000/perspektive/new/">Перспективы использования в массовой практике</a></li>
+    <li><a href="http://127.0.0.1:8000/plan_realization_v_project/new/">План реализации в проекте</a></li>
+    <li><a href="http://127.0.0.1:8000/prognoz_razvitia_proekta/new/">Прогноз развития проекта</a></li>
+    <li><a href="http://127.0.0.1:8000/project/new/">Проекты</a></li>
+    <li><a href="http://127.0.0.1:8000/function/new/">Функции</a></li>
+    <li><a href="http://127.0.0.1:8000/function_v_project/new/">Функции в проекте</a></li>
+    <li><a href="display_organization.html">display organization</a></li>
+</ul>
+ </li>
+</ul>
+
+
+</body>
+</html>

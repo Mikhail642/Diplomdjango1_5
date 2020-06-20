@@ -1,0 +1,17 @@
+{% extends 'base_organization.html' %}
+
+{% block content %}
+    <div class="Organization">
+        {% if organization.name_organization %}
+            <div class="name_organization">
+                {{ organization.name_organization }}
+            </div>
+        {% endif %}
+
+{% if user.is_authenticated %}
+     <a class="btn btn-default" href="{% url 'organization_edit'  %}"><span class="glyphicon glyphicon-pencil"></span></a>
+{% endif %}
+        <h1>{{ organization.name_organization }}</h1>
+    </div>
+{% endblock %}
+
