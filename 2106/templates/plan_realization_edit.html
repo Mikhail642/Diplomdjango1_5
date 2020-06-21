@@ -1,0 +1,22 @@
+<html>
+<head></head>
+<style>
+        .forma{
+        font-family: "Times New Roman";
+        font-size: 25px;
+    }
+</style>
+
+<body>
+
+{% extends 'base_plan_realization_v_project.html' %}
+
+{% block content %}
+    <h1 class="forma">Форма для добавления Плана реализации проекта</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Добавить</button>
+    </form>
+{% endblock %}
+
+</body>

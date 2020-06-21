@@ -1,0 +1,161 @@
+{% load static %}
+<html>
+<head>
+ <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+     * { box-sizing: border-box; }
+body {
+  margin: 0;
+  height: 100px;
+background:#B0E0E6;
+font-family: "Times New Roman";
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  transition: .4s ease-in-out;
+}
+
+.topmenu > li > a {
+  font-family: 'Exo 2', sans-serif;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 30px;
+  font-weight: bold;
+  color:Coral;
+  text-transform: uppercase;
+}
+
+.topmenu li a:hover { color: black; }
+
+.topmenu > li:hover .submenu{
+  visibility: visible;
+  opacity: 1;
+  transform: perspective(600px) rotateX(0deg);
+}
+.submenu li a {
+  color: Coral;
+  font-size: 13px;
+  line-height: 36px;
+  padding: 0 25px;
+  font-family: 'Times new Roman';
+}
+
+.text-center{
+color: blue;
+margin-top: 60px;
+font-family: 'Times new Roman';
+}
+
+
+body {
+    margin:0px;
+    padding:0px;
+    font: 14px 'Verdana';
+    background: #B0E0E6;
+}
+ul {
+    list-style: none;
+    display: block;
+    margin:0px;
+    padding:0px;
+    background: black;
+}
+ul:after {
+    float: none;
+    content: ' ';
+    clear: both;
+}
+ul.mmenuu > li {
+    float: left;
+    position: relative;
+}
+ul.mmenuu > li > a {
+    display: block;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    background-color: Coral;
+}
+ul.mmenuu > li > a:hover {
+    background-color: Coral;
+}
+ul.ssubmenuu {
+    position: absolute;
+    width: 240px;
+    top: 37px;
+    left:0px;
+    display: none;
+    background-color: black;
+}
+ul.ssubmenuu > li {
+    display: block;
+
+}
+ul.ssubmenuu > li > a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    background-color: Coral;
+}
+ul.ssubmenuu > li > a:hover {
+
+    background-color: #B0E0E6;
+
+    text-decoration: underline;
+}
+ul.mmenuu > li:hover > ul.ssubmenuu {
+
+    display: block;
+}
+
+ .voqti{
+margin-left: 60px;
+ }
+    </style>
+
+</head>
+<body bgcolor="DarkSalmon">
+<h1 class="text-center">"Электронный банк цифровых образовательных ресурсов"</h1>
+
+
+<ul class="mmenuu">
+    <li><a href=#>Просмотр данных РИП</a>
+        <ul class="ssubmenuu">
+    <li><a href="http://127.0.0.1:8000/display_organization/">Организации</a></li>
+    <li><a href="http://127.0.0.1:8000/display_partner_organization/">Организации-партнеры</a></li>
+    <li><a href="http://127.0.0.1:8000/display_perspektive_ispolzovania">Перспективы использования в массовой практике</a></li>
+    <li><a href="http://127.0.0.1:8000/display_plan_realization/">Планы реализации проектов</a></li>
+    <li><a href="http://127.0.0.1:8000/display_prognoz_razvitia/">Прогнозы развития проекта</a></li>
+    <li><a href="http://127.0.0.1:8000/display_project/">Проекты</a></li>
+    <li><a href="http://127.0.0.1:8000/display_function/">Функции</a></li>
+    <li><a href="http://127.0.0.1:8000/display_function_v_project/">Функции в проекте</a></li>
+</ul>
+ </li>
+  <li><a href=#>Добавление данных РИП</a>
+        <ul class="ssubmenuu">
+    <li><a href="http://127.0.0.1:8000/organization/new/">Организации</a></li>
+    <li><a href="http://127.0.0.1:8000/partner/new/">Организации-партнеры</a></li>
+    <li><a href="http://127.0.0.1:8000/perspektive/new/">Перспективы использования в массовой практике</a></li>
+    <li><a href="http://127.0.0.1:8000/plan_realization_v_project/new/">Планы реализации в проекте</a></li>
+    <li><a href="http://127.0.0.1:8000/prognoz_razvitia_proekta/new/">Прогнозы развития проекта</a></li>
+    <li><a href="http://127.0.0.1:8000/project/new/">Проекты</a></li>
+    <li><a href="http://127.0.0.1:8000/function/new/">Функции</a></li>
+    <li><a href="http://127.0.0.1:8000/function_v_project/new/">Функции в проекте</a></li>
+</ul>
+ </li>
+</ul>
+ <li class="voqti"><a href="http://127.0.0.1:8000/register/">Зарегестрироваться</a></li>
+
+ <li class="voqti"><a href="http://127.0.0.1:8000/admin/login/?next=/admin/">Войти</a></li>
+</body>
+</html>

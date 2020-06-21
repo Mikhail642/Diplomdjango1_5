@@ -1,0 +1,68 @@
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+   body {
+background:#B0E0E6;
+     font-family: "Times New Roman";
+}
+
+   h1 {
+            font-size: 30px;
+            font-family: "Times New Roman";
+            color: OrangeRed;
+            margin-left: 20px;
+        }
+          h2{
+            margin-left: 20px;
+            margin-top: 40px;
+
+        }
+
+    </style>
+
+</head>
+<body bgcolor="PowderBlue">
+ <h2><a href="http://127.0.0.1:8000/">"Электронный банк цифровых образовательных ресурсов"</a></h2>
+<h1>Проекты</h1>
+
+
+
+
+<table class="table">
+    <tr>
+
+        <th class="name_project" style="background-color:DodgerBlue">Название <br>
+       проекта</th>
+        <th class="data_realizachii_s" style="background-color:orange"> Дата реализации с</th>
+        <th class="data_realizachii_po" style="background-color:tomato"> Дата реализаци по</th>
+        <th class="selka_na_saite" style="background-color:DodgerBlue"> Ссылка на сайте</th>
+        <th class="product_innovation_deatelnosti" style="background-color:orange"> Продукт инновационной
+            <br>деятельности</th>
+        <th class="rukovoditel_organization" style="background-color:tomato"> Руководитель<br> организации</th>
+        <th class="nauche_rukovoditel" style="background-color:DodgerBlue"> Научный<br> руководитель</th>
+        <th class="name_organization" style="background-color:orange"> Наименование<br> организации</th>
+        <th class="provereno" style="background-color:tomato"> Отметка<br> о проверке</th>
+        <th class="avtor" style="background-color:DodgerBlue"> Автор</th>
+    </tr>
+    {% for i in project  %}
+    <tr>
+        <td> {{ i.name_project }}</td>
+        <td> {{ i.data_realizachii_s }}</td>
+        <td> {{ i.data_realizachii_po }}</td>
+        <td> {{ i.selka_na_saite }}</td>
+        <td> {{ i.product_innovation_deatelnosti }}</td>
+        <td> {{ i.rukovoditel_organization }}</td>
+        <td> {{ i.nauche_rukovoditel }}</td>
+        <td> {{ i.name_organization }}</td>
+        <td> {{ i.provereno }}</td>
+        <td> {{ i.avtor }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
