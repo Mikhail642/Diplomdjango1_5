@@ -1,0 +1,52 @@
+{% extends 'base_prognoz_razvitia_proekta.html' %}
+
+{% block content %}
+    <div class="Prognoz_razvitia_proekta_detail">
+        {% if Prognoz_razvitia_proekta. id_project %}
+            <div class="id_project">
+                {{ Prognoz_razvitia_proekta. id_project }}
+            </div>
+        {% endif %}
+
+        {% if Prognoz_razvitia_proekta.zadacha_prognoza %}
+            <div class="zadacha_prognoza">
+                {{ Prognoz_razvitia_proekta.zadacha_prognoza }}
+            </div>
+        {% endif %}
+
+         {% if Prognoz_razvitia_proekta.name_product %}
+            <div class="name_product">
+                {{ Prognoz_razvitia_proekta.name_product }}
+            </div>
+        {% endif %}
+
+        {% if Prognoz_razvitia_proekta. kratkoe_opisanie %}
+            <div class="kratkoe_opisanie">
+                {{ Prognoz_razvitia_proekta.kratkoe_opisanie }}
+            </div>
+        {% endif %}
+
+        {% if Prognoz_razvitia_proekta. sroki_realizachii_s %}
+            <div class="sroki_realizachii_s">
+                {{ Prognoz_razvitia_proekta.sroki_realizachii_s }}
+            </div>
+        {% endif %}
+
+        {% if Prognoz_razvitia_proekta.sroki_realizachii_po %}
+            <div class="sroki_realizachii_po">
+                {{ Prognoz_razvitia_proekta.sroki_realizachii_po }}
+            </div>
+        {% endif %}
+
+{% if user.is_authenticated %}
+     <a class="btn btn-default" href="{% url 'perspektive_edit'  %}"><span class="glyphicon glyphicon-pencil"></span></a>
+{% endif %}
+        <h1>{{Prognoz_razvitia_proekta. id_project }}</h1>
+        <h1>{{Prognoz_razvitia_proekta.zadacha_prognoza }}</h1>
+        <h1>{{Prognoz_razvitia_proekta.name_product }}</h1>
+        <h1>{{Prognoz_razvitia_proekta. kratkoe_opisanie }}</h1>
+        <h1>{{Prognoz_razvitia_proekta. sroki_realizachii_s }}</h1>
+        <h1>{{Prognoz_razvitia_proekta.sroki_realizachii_po }}</h1>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,17 @@
+{% extends 'base_partner.html' %}
+
+{% block content %}
+    <div class="Partner">
+        {% if partner.name_partners %}
+            <div class="name_partners">
+                {{ partner.name_partners }}
+            </div>
+        {% endif %}
+
+{% if user.is_authenticated %}
+     <a class="btn btn-default" href="{% url 'partner_edit'  %}"><span class="glyphicon glyphicon-pencil"></span></a>
+{% endif %}
+        <h1>{{ partner.name_partners }}</h1>
+    </div>
+{% endblock %}
+

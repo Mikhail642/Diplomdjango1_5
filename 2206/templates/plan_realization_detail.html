@@ -1,0 +1,17 @@
+{% extends 'base_plan_realization_v_project.html' %}
+
+{% block content %}
+    <div class="PlanRealizachiiVProekte">
+        {% if PlanRealizachiiVProekte.zadacha %}
+            <div class="zadacha">
+                {{ PlanRealizachiiVProekte.zadacha }}
+            </div>
+        {% endif %}
+
+{% if user.is_authenticated %}
+     <a class="btn btn-default" href="{% url 'plan_realization_edit'  %}"><span class="glyphicon glyphicon-pencil"></span></a>
+{% endif %}
+        <h1>{{ PlanRealizachiiVProekte.zadacha }}</h1>
+    </div>
+{% endblock %}
+

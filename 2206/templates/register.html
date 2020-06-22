@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Создать пользователя{% endblock %}
+
+{% block content %}
+    <form action="." method="post">
+        {{ user_form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="Войти в систему"></p>
+    </form>
+{% endblock %}

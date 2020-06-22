@@ -1,0 +1,86 @@
+{% extends 'base_project.html' %}
+
+{% block content %}
+    <div class="Project">
+        {% if Project.name_project %}
+            <div class=" name_project">
+                {{ Project.name_project }}
+            </div>
+        {% endif %}
+        {% if Project.data_realizachii_s %}
+            <div class=" data_realizachii_s">
+                {{ Project.data_realizachii_s }}
+            </div>
+        {% endif %}
+
+        {% if Project.data_realizachii_po %}
+            <div class=" data_realizachii_po">
+                {{ Project.data_realizachii_po }}
+            </div>
+        {% endif %}
+
+        {% if Project.selka_na_saite  %}
+            <div class="selka_na_saite">
+                {{ Project.selka_na_saite }}
+            </div>
+        {% endif %}
+
+        {% if Project.product_innovation_deatelnosti  %}
+            <div class="product_innovation_deatelnosti">
+                {{ Project.product_innovation_deatelnosti }}
+            </div>
+        {% endif %}
+
+         {% if Project.rukovoditel_organization  %}
+            <div class="rukovoditel_organization">
+                {{ Project.rukovoditel_organization }}
+            </div>
+        {% endif %}
+
+         {% if Project.nauche_rukovoditel  %}
+            <div class="nauche_rukovoditel">
+                {{ Project.nauche_rukovoditel }}
+            </div>
+        {% endif %}
+
+         {% if Project.predloshenie_po_ispolzovanie  %}
+            <div class="predloshenie_po_ispolzovanie">
+                {{ Project.predloshenie_po_ispolzovanie }}
+            </div>
+        {% endif %}
+
+         {% if Project.name_organization  %}
+            <div class="name_organization">
+                {{ Project.name_organization }}
+            </div>
+        {% endif %}
+
+        {% if Project.provereno  %}
+            <div class="provereno">
+                {{ Project.provereno }}
+            </div>
+        {% endif %}
+
+        {% if Project.avtor  %}
+            <div class="avtor">
+                {{ Project.avtor }}
+            </div>
+
+        {% endif %}
+{% if user.is_authenticated %}
+     <a class="btn btn-default" href="{% url 'perspektive_edit'  %}"><span class="glyphicon glyphicon-pencil"></span></a>
+{% endif %}
+        <h1>{{ Project.name_project }}</h1>
+        <h1>{{ Project.data_realizachii_s }}</h1>
+        <h1>{{ Project.data_realizachii_po }}</h1>
+        <h1>{{ Project.selka_na_saite }}</h1>
+        <h1>{{ Project.product_innovation_deatelnosti }}</h1>
+        <h1>{{ Project.rukovoditel_organization }}</h1>
+        <h1>{{ Project.nauche_rukovoditel }}</h1>
+        <h1>{{ Project.predloshenie_po_ispolzovanie }}</h1>
+        <h1>{{ Project.name_organization }}</h1>
+        <h1>{{ Project.avtor }}</h1>
+        <h1>{{ Project.avtor }}</h1>
+    </div>
+{% endblock %}
+
